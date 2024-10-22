@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Axel">
+    <meta name="author" content="M4 UF1 P3">
+    <title>
+        E3-Axel
+    </title>
+</head>
+<body style="background-color: green;">
+    <hr>
+    <h4>
+        A nested list
+    </h4>
+    <ul>
+        <li>
+            Coffee
+        </li>
+        <li>
+            Tea
+        </li>
+            <ul>
+                <li>
+                    Black Tea
+                </li>
+                <li>
+                    Green Tea
+                </li>
+                <ul>
+                    <li>
+                        China
+                    </li>
+                    <li>
+                        Africa
+                    </li>
+                </ul>
+            </ul>
+        <li>
+            Milk
+        </li>
+    </ul>
+    <dl>
+        <dt>
+            Coffee
+        </dt>
+        <dd>
+            - black hot drink
+        </dd>
+        <dt>
+            Milk
+        </dt>
+        <dd>
+            - white cold drink
+        </dd>
+    </dl>
+    <h4>
+        Numbered list
+    </h4>
+    <ol type="1">
+        <li>
+            Apples
+        </li>
+        <li>
+            Bananas
+        </li>
+        <li>
+            Lemons
+        </li>
+        <li>
+            Oranges
+        </li>
+    </ol>
+    <h4>
+        Letters list
+    </h4>
+    <ol type="A">
+        <li>
+            Apples
+        </li>
+        <li>
+            Bananas
+        </li>
+        <li>
+            Lemons
+        </li>
+        <li>
+            Oranges
+        </li>
+    </ol>
+    <h4>
+        Lowercase letters list
+    </h4>
+    <ol type="a">
+        <li>
+            Apples
+        </li>
+        <li>
+            Bananas
+        </li>
+        <li>
+            Lemons
+        </li>
+        <li>
+            Oranges
+        </li>
+    </ol>
+    <h4>
+        Roman numbers list
+    </h4>
+    <ol type="I">
+        <li>
+            Apples
+        </li>
+        <li>
+            Bananas
+        </li>
+        <li>
+            Lemons
+        </li>
+        <li>
+            Oranges
+        </li>
+    </ol>
+    <h4>
+        Lowercase Roman numbers list
+    </h4>
+    <ol type="i">
+        <li>
+            Apples
+        </li>
+        <li>
+            Bananas
+        </li>
+        <li>
+            Lemons
+        </li>
+        <li>
+            Oranges
+        </li>
+    </ol>
+    <hr>
+    <p>
+        Link per enviar emails a una adreça determinada
+    </p>
+    <a href="https://youtube.com/watch?v=xvFZjo5PgG0">
+        Enviar email
+    </a>
+    <hr>
+    <h1>
+        CREATE TABLE examples
+    </h1>
+    <ul>
+        <li>
+            <a href="https://www.youtube.com/shorts/xSsCIhQCTpM">Basic CREATE TABLE statement</a>
+        </li>
+        <li>
+            <a href="https://www.youtube.com/watch?v=1wvL99nmIUU">Creating a table with a particular storage engine</a>
+        </li>
+        <li>
+            <a href="https://www.youtube.com/watch?v=Kpp0X2EVWyE">Creating a table with auto increment</a>
+        </li>
+        <li>
+            <a href="https://www.youtube.com/shorts/Gl7Y2yN9AGY">Creating a table with the current timestamp</a>
+        </li>
+        <li>
+            <a href="https://www.youtube.com/watch?v=5NIA8Ef5C-Q">Creating a table with TIMESTAMP DEFAULT NOW()</a>
+        </li>
+        <li>
+            <a href="https://www.youtube.com/watch?v=mCh6VpxLubc">Viewing a table definition</a>
+        </li>
+    </ul>
+    <h2>
+        Basic CREATE TABLE statement
+    </h2>
+    <p style="display: inline;">A very basic <pre style="display:inline;">CREATE TABLE</pre> statement which should work in any SQL database</p>
+    <pre>
+mysql> CREATE TABLE mitabla (
+id MEDIUMINT NOT NULL AUTO_INCREMENT,
+nombre CHAR(30) NOT NULL,
+edad INTEGER(30),
+salario INTEGER(30),
+PRIMARY KEY (id) );
+    </pre>
+    <p style="display: inline;">Note that beginning with MySQL 4.1 <pre style="display:inline;">ENGINE=innodb</pre> is the preferred method of defining the storage type</p>
+    <p style="display: inline;">Use <pre style="display: inline;">SHOW CREATE TABLE</pre> (see <a href="https://www.youtube.com/watch?v=zsFoeENih8s">below)</a> to check that MySQL has created the table as you definied it.</p>
+    <h2>
+        Creating a table with auto_increment
+    </h2>
+    <p>Often you'll want to be able to automatically assign a sequential value to a column:</p>
+    <pre>
+mysql> CREATE TABLE 'tableT1' (
+'idT1' int(11) NOT NULL AUTO_INCREMENT,
+'nombreT1' varchar(30),
+PRIMARY KEY ('idT1')
+);
+    </pre>
+    <pre>
+mysql> SELECT id, nombre FROM empleados ORDER BY RAND() LIMIT 3;
++----+----------+
+| id | nombre   |
++----+----------+
+|  2 | Laura    |
+|  7 | Carlos   |
+|  4 | Ana      |
++----+----------+
+3 rows in set (0.00 sec)
+    </pre>
+</body>
